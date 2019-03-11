@@ -127,5 +127,13 @@ The training set= train_generator , test_set = Validation_generator
 I trained the model using Cuda 10 GPU for effective training of the model.
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 4 as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
 The mse for the model is as below
+Epoch 1/4
+603/602 [==============================] - 1063s 2s/step - loss: 0.0195 - val_loss: 0.0156
+Epoch 2/4
+603/602 [==============================] - 997s 2s/step - loss: 0.0162 - val_loss: 0.0150
+Epoch 3/4
+603/602 [==============================] - 874s 1s/step - loss: 0.0148 - val_loss: 0.0137
+Epoch 4/4
+603/602 [==============================] - 878s 1s/step - loss: 0.0141 - val_loss: 0.0127
 
 
