@@ -26,10 +26,11 @@ My project includes the following files:
 * writeup_report.md or writeup_report.pdf summarizing the results
 * drive.py for converting the saved images into video file.
 * run1 folder output images while car running in autonomous mode
-* run1.mp4 to see the autonomous mode car driving
+* run1.mp4 to see the autonomous mode car driving. 
 
 #### 2. Submission includes functional code
-Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
+Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing.
+Uploaded link for the video.mp4 [self_driving_car](https://youtu.be/B516L7uYdvw)
 ```python drive.py model.h5
 ```
 #### 3. Submission code is usable and readable
