@@ -26,11 +26,10 @@ My project includes the following files:
 * writeup_report.md or writeup_report.pdf summarizing the results
 * drive.py for converting the saved images into video file.
 * run1 folder output images while car running in autonomous mode
-* run1.mp4 to see the autonomous mode car driving. 
+* run1.mp4 to see the autonomous mode car driving
 
 #### 2. Submission includes functional code
-Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing.
-Uploaded link for the video.mp4 [self_driving_car](https://youtu.be/B516L7uYdvw)
+Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```python drive.py model.h5
 ```
 #### 3. Submission code is usable and readable
@@ -108,6 +107,10 @@ _________________________________________________________________
 dense_3 (Dense)              (None, 10)                510       
 _________________________________________________________________
 dense_4 (Dense)              (None, 1)                 11        
+
+
+![Architecture](image.png)
+
 =================================================================
 
 
@@ -116,6 +119,28 @@ dense_4 (Dense)              (None, 1)                 11
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
 After the collection process, I had 24108 data images. I then preprocessed this data by combining center, left, right images into imagepath & measurement parameter.
+<<<<<<< HEAD
+
+Split the total data points into train and validation samples 
+Train samples: 19286
+Validation samples: 4822 
+For training the data i used generator , the image file size is very large. 
+while generating yields i flipped, trimmed and crop the image to get the useful information. 
+
+The training set= train_generator , test_set = Validation_generator
+
+I trained the model using Cuda 10 GPU for effective training of the model.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 4 as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+The mse for the model is as below
+Epoch 1/4
+603/602 [==============================] - 1063s 2s/step - loss: 0.0195 - val_loss: 0.0156
+Epoch 2/4
+603/602 [==============================] - 997s 2s/step - loss: 0.0162 - val_loss: 0.0150
+Epoch 3/4
+603/602 [==============================] - 874s 1s/step - loss: 0.0148 - val_loss: 0.0137
+Epoch 4/4
+603/602 [==============================] - 878s 1s/step - loss: 0.0141 - val_loss: 0.0127
+=======
 
 Split the total data points into train and validation samples 
 Train samples: 19286
@@ -137,4 +162,5 @@ Epoch 3/4
 Epoch 4/4
 603/602 [==============================] - 878s 1s/step - loss: 0.0141 - val_loss: 0.0127
 
+>>>>>>> b6c9abfb8a13cd727bf6cbd7f14f1582216971e9
 
