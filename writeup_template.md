@@ -29,8 +29,8 @@ My project includes the following files:
 * run1.mp4 to see the autonomous mode car driving
 
 #### 2. Submission includes functional code
-Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
-```python drive.py model.h5
+Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing "python drive.py model.h5" .Github won't allow more data to upload , I saved the output video file [here](https://youtu.be/B516L7uYdvw) 
+```
 ```
 #### 3. Submission code is usable and readable
 
@@ -63,20 +63,22 @@ I used a combination of center lane driving, recovering from the left and right 
 
 #### 1. Solution Design Approach
 
-The overall strategy for deriving a model architecture was to ...
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
+The overall strategy for deriving a Convolution Nerual Network model architecture, is they extract the futures  from the small portions of image.
 
-To combat the overfitting, I modified the model and added few parameter changes in dense , middle layers structure etc.
+In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set.I used similar model like NVIDIA. This implied that the model was overfitting.
+
+To overcome  the overfitting, I modified the model and added few parameter changes in dense , middle layers structure etc and added dropout, dense layers after the convolution layers.
 
 The final step was to run the simulator to see how well the car was driving around track one. the learning rate was needed to improve model , car felloff at the curvature . so modified the learning rate and epoches.
 
-At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
+At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road [here](https://youtu.be/B516L7uYdvw).
 
 #### 2. Final Model Architecture
 
 The final model architecture (model.ipynb lines 9th block ) consisted of a convolution neural network with the following layers and layer sizes ...
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
+
 
 _Layer (type)                 Output Shape              Param #   
 =================================================================
@@ -139,28 +141,5 @@ Epoch 2/4
 Epoch 3/4
 603/602 [==============================] - 874s 1s/step - loss: 0.0148 - val_loss: 0.0137
 Epoch 4/4
-603/602 [==============================] - 878s 1s/step - loss: 0.0141 - val_loss: 0.0127
-=======
-
-Split the total data points into train and validation samples 
-Train samples: 19286
-Validation samples: 4822 
-For training the data i used generator , the image file size is very large. 
-while generating yields i flipped, trimmed and crop the image to get the useful information. 
-
-The training set= train_generator , test_set = Validation_generator
-
-I trained the model using Cuda 10 GPU for effective training of the model.
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 4 as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
-The mse for the model is as below
-Epoch 1/4
-603/602 [==============================] - 1063s 2s/step - loss: 0.0195 - val_loss: 0.0156
-Epoch 2/4
-603/602 [==============================] - 997s 2s/step - loss: 0.0162 - val_loss: 0.0150
-Epoch 3/4
-603/602 [==============================] - 874s 1s/step - loss: 0.0148 - val_loss: 0.0137
-Epoch 4/4
-603/602 [==============================] - 878s 1s/step - loss: 0.0141 - val_loss: 0.0127
-
->>>>>>> b6c9abfb8a13cd727bf6cbd7f14f1582216971e9
+603/602 [==============================] - 878s 1s/step - loss: 0.0141 - val_loss: 0.012
 
