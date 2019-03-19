@@ -119,12 +119,12 @@ dense_4 (Dense)              (None, 1)                 11
 #### 3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+![image1](run1/2019_03_11_19_23_33_310.jpg)
 
-After the collection process, I had 24108 data images. I then preprocessed this data by combining center, left, right images into imagepath & measurement parameter.
+After capturing the images from simulator, I preprocessed this data by combining center, left, right images into imagepath & measurement parameter and the resulted data set has 24108 images, they are the prepossd data for running m model to train it.
+ ![image2](run1/2019_03_11_19_23_33_236.jpg)
 
-![image1](run1/2019_03_11_19_23_33_310.jpg) ![image2](run1/2019_03_11_19_23_33_236.jpg)
-
-Split the total data points into train and validation samples 
+I split the total data set into train and validation samples 
 Train samples: 19286
 Validation samples: 4822 
 For training the data i used generator , the image file size is very large. 
@@ -137,10 +137,13 @@ I used this training data for training the model. The validation set helped dete
 The mse for the model is as below
 Epoch 1/4
 603/602 [==============================] - 1063s 2s/step - loss: 0.0195 - val_loss: 0.0156
+
 Epoch 2/4
 603/602 [==============================] - 997s 2s/step - loss: 0.0162 - val_loss: 0.0150
+
 Epoch 3/4
 603/602 [==============================] - 874s 1s/step - loss: 0.0148 - val_loss: 0.0137
+
 Epoch 4/4
 603/602 [==============================] - 878s 1s/step - loss: 0.0141 - val_loss: 0.012
 
