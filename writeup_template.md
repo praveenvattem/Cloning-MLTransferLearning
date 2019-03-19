@@ -124,7 +124,7 @@ To capture good driving behavior, I first recorded two laps on track one using c
 After capturing the images from simulator, I preprocessed this data by combining center, left, right images into imagepath & measurement parameter and the resulted data set has 24108 images, they are the prepossd data for running m model to train it.
  ![image2](run1/2019_03_11_19_23_33_236.jpg)
 
-I split the total data set into train and validation samples 
+I split the total data set into train and validation samples with ratio 0.2. it is necessary that large amount of data set should be used for training the model. and some portion used for testing.
 Train samples: 19286
 Validation samples: 4822 
 For training the data i used generator , the image file size is very large. 
