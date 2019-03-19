@@ -122,7 +122,7 @@ To capture good driving behavior, I first recorded two laps on track one using c
 
 After the collection process, I had 24108 data images. I then preprocessed this data by combining center, left, right images into imagepath & measurement parameter.
 
-[image1](run1/2019_03_11_19_23_33_310.jpg)[image2](run1/2019_03_11_19_23_33_236.jpg)
+![image1](run1/2019_03_11_19_23_33_310.jpg) ![image2](run1/2019_03_11_19_23_33_236.jpg)
 
 Split the total data points into train and validation samples 
 Train samples: 19286
